@@ -1,0 +1,4 @@
+# Track large gate-level netlists with Git LFS
+# (each 1_2_yosys.v is ~4 MB — above GitHub's 50 MB soft warning but
+#  well handled by LFS.  Install with: sudo apt install git-lfs && git lfs install)
+*.v filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,27 @@
+# ── OS / editor noise ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# ── Raw docker terminal log (large, not needed for review) ─────────────
+docker_terminal_full.log
+terminal_inputs_&_outputs.log
+
+# ── Any locally generated ORFS build artifacts ─────────────────────────
+objects/
+results/
+logs/
+reports/
+*.odb
+*.def
+*.gds
+*.sdf
+*.spef
+
+# ── Python byte-cache ──────────────────────────────────────────────────
+__pycache__/
+*.pyc

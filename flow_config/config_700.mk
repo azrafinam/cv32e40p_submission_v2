@@ -1,0 +1,13 @@
+export PLATFORM             = asap7
+export DESIGN_NICKNAME      = cv32e40p_700
+export DESIGN_NAME          = cv32e40p_core
+export VERILOG_INCLUDE_DIRS = ./designs/src/cv32e40p/include
+export VERILOG_FILES        = $(sort $(wildcard ./designs/src/cv32e40p/include/*.sv)) $(sort $(wildcard ./designs/src/cv32e40p/*.sv))
+export SDC_FILE             = ./designs/asap7/cv32e40p/constraint_700.sdc
+export SYNTH_HDL_FRONTEND   = slang
+export SLANG_PLUGIN_PATH    = /OpenROAD-flow-scripts/tools/install/yosys/share/yosys/plugins/slang.so
+export MAX_FANOUT           = 8
+export DIE_AREA             = 0 0 200 200
+export CORE_AREA            = 2 2 198 198
+export PLACE_DENSITY        = 0.60
+export TNS_END_PERCENT      = 100
