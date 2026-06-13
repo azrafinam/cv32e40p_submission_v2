@@ -104,6 +104,26 @@ cv32e40p_submission_v2/
 | Cell library | `asap7sc7p5t_AO` 7.5-track, RVT, FF-corner NLDM |
 | Constraints | `MAX_FANOUT = 8`, `DIE_AREA 0 0 200 200`, `CORE_AREA 2 2 198 198` |
 
+## Installing ORFS
+
+To set up OpenROAD-flow-scripts (ORFS) for running the flow:
+
+````bash
+# 1. Add your user to the Docker group
+sudo usermod -aG docker $USER
+newgrp docker
+
+# 2. Clone the OpenROAD-flow-scripts repository (with submodules)
+git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts
+cd OpenROAD-flow-scripts
+
+# 3. Build OpenROAD
+./build_openroad.sh
+````
+
+For additional details on Docker setup and shell usage, refer to the
+[Docker Shell documentation](https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts/blob/master/docs/user/DockerShell.md).
+
 ## How to Reproduce
 
 ````bash
@@ -152,5 +172,3 @@ RTL sources are derived from the
 (Solderpad Hardware License v2.0). The flip-flop register-file variant
 (`cv32e40p_register_file_ff.sv`) is used, as appropriate for standard-cell
 synthesis; the latch variant is excluded.
-````
-````
